@@ -12,7 +12,8 @@ const removeItems = () => {
 
     let removeIds = [
         "blocking-modal",
-        "nsfw-qr-dialog"
+        "nsfw-qr-dialog",
+        "configured-xpromo-blocking_xpromo_nsfw_blocking_desktop_cms"
     ];
 
     let removeTags = [
