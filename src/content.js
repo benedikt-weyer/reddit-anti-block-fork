@@ -35,6 +35,15 @@ const removeItems = () => {
             }
         }
     }
+
+    // custom handling for xpromo-nsfw-blocking-container, which is a shadow root and can't be removed by id or tag name
+    const xpromoShadowRoots = document.querySelectorAll('xpromo-nsfw-blocking-container');
+    xpromoShadowRoots.forEach(root => {
+        root.shadowRoot.querySelectorAll('.prompt').forEach(prompt => {
+            prompt.remove();
+        });
+    });
+    
 }
 
 setInterval(removeItems, 2000);
